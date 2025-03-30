@@ -18,10 +18,10 @@
             <div class="menu__boton__hamburguesa__contenido"></div>
         </button>
         <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Home</a>
-            <a class="header__menu__link" href="#about">About</a>
-            <a class="header__menu__link" href="#eventos">Events</a>
-            <a class="header__menu__link" href="#blog">Blog</a>
+            <a class="header__menu__link" href="index.html" onclick="cerrarmenuHamburguesa();">Home</a>
+            <a class="header__menu__link" href="#about" onclick="cerrarmenuHamburguesa();">About</a>
+            <a class="header__menu__link" href="#eventos" onclick="cerrarmenuHamburguesa();">Events</a>
+            <a class="header__menu__link" href="#blog" onclick="cerrarmenuHamburguesa();">Blog</a>
         </nav>
     </header>
 
@@ -200,45 +200,45 @@
             <div class="preguntas__frecuentes">
                 <div class="preguntas__frecuentes__contenido">
                     <h4 class="preguntas__frecuentes__titulo">What kind of events and networking opportunities does Cowork provide?</h4>
-                    <p class="container__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
                 </div>
-                <button class="preguntas__frecuentes__boton">
+                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
                     <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
                 </button>
             </div>
             <div class="preguntas__frecuentes">
                 <div class="preguntas__frecuentes__contenido">
                     <h4 class="preguntas__frecuentes__titulo">Can I tour the Cowork space before committing to a membership?</h4>
-                    <p class="container__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
                 </div>
-                <button class="preguntas__frecuentes__boton">
+                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
                     <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
                 </button>
             </div>
             <div class="preguntas__frecuentes">
                 <div class="preguntas__frecuentes__contenido">
                     <h4 class="preguntas__frecuentes__titulo">Is Cowork suitable for remote teams and distributed workforces?</h4>
-                    <p class="container__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
                 </div>
-                <button class="preguntas__frecuentes__boton">
+                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
                     <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
                 </button>
             </div>
             <div class="preguntas__frecuentes">
                 <div class="preguntas__frecuentes__contenido">
                     <h4 class="preguntas__frecuentes__titulo">What measures does Cowork take for environmental sustainability?</h4>
-                    <p class="container__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
                 </div>
-                <button class="preguntas__frecuentes__boton">
+                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
                     <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
                 </button>
             </div>
             <div class="preguntas__frecuentes">
                 <div class="preguntas__frecuentes__contenido">
                     <h4 class="preguntas__frecuentes__titulo">Still has questions?</h4>
-                    <p class="container__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
                 </div>
-                <button class="preguntas__frecuentes__boton">
+                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
                     <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
                 </button>
             </div>
@@ -307,7 +307,7 @@
                 </a>
             </div>
         </div>
-        <div class="blog__contenedor"  id="blog-contenido">
+        <div class="blog__contenedor ocultar"  id="blog-contenido">
             <div class="blog__contenido">
                 <img class="blog__contenido__imagen" src="assets/card-imagen-4.jpg" alt="imagen blog">
                 <div class="blog__contenido__info">
@@ -347,7 +347,7 @@
                 </a>
             </div>
         </div>
-        <button class="container__contenido__link" onclick="verMas();">View All</button>
+        <button class="container__contenido__link" onclick="verMas(this);">View All</button>
     </section>
 
     <footer class="container">

@@ -47,7 +47,6 @@ function botonSiguiente(){
         indiceActual++;
     }
     actualizarCarrusel();
-
 }
 
 function actualizarCarrusel(){
@@ -62,55 +61,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
 //PREGUNTAS FRECUENTES
-
-// let texto = document.getElementById('preguntas__frecuentes__texto');
-// texto.classList.add('preguntas__frecuentes__texto');
-// function visualizarRespuesta(button){
-    
-//     // texto.classList.toggle('preguntas__frecuentes__texto--open');
-//     texto.classList.add('preguntas__frecuentes__texto--open');
-
-//     if(texto.classList.contains('preguntas__frecuentes__texto--open')){
-//         button.classList.add('preguntas__frecuentes__boton--open');
-//     }else{
-//         button.classList.remove('preguntas__frecuentes__boton--open');
-//     }
-// }
-
-
-let texto = document.getElementById('preguntas__frecuentes__texto');
-texto.classList.remove('preguntas__frecuentes__texto--open');
-let boton = document.querySelector('.preguntas__frecuentes__boton');
-
 function visualizarRespuesta(button){
-    
+    let texto = button.previousElementSibling.querySelector('.preguntas__frecuentes__texto');
+
+    //Mostrar u oclutar el texto alternando la clase
     texto.classList.toggle('preguntas__frecuentes__texto--open');
 
+    //Alternar la clase de rotación del boton
     if(texto.classList.contains('preguntas__frecuentes__texto--open')){
         button.classList.add('preguntas__frecuentes__boton--open');
     }else{
         button.classList.remove('preguntas__frecuentes__boton--open');
     }
+
 }
 
 
 
 
 
-
-
 //BLOG
-const contenido = document.getElementById('blog-contenido');
+function verMas(button){
+    let contenido = document.getElementById('blog-contenido');
 
-contenido.style.display = 'none';
-function verMas(){
-    if (contenido.style.display === 'none') {
-        contenido.style.display = 'flex';
-    } else {
-        contenido.style.display = 'none';
-    }
+    //Mostrar u oclutar el texto alternando la clase
+    contenido.classList.toggle('ocultar--open');
 
+    //Alternar el contenido del boton
+    button.textContent = button.textContent.includes('View All') ? 'View Less' : 'View All';
 }
 
 
