@@ -34,8 +34,6 @@ function cerrarmenuHamburguesa() {
 let indiceActual = 1;
 const carrusel = document.getElementById('carrusel');
 const totalTestimonios = document.querySelectorAll('.testimonio__contenido').length + 1;
-console.log('indiceactual:', indiceActual);
-console.log(totalTestimonios);
 
 function botonAnterior(){
     if(indiceActual>1){
@@ -55,12 +53,66 @@ function botonSiguiente(){
 function actualizarCarrusel(){
     // const distancia = indiceActual * -100;
     const distancia = 20 + (indiceActual * -20);
-    console.log('distancia:', distancia);
     carrusel.style.transform = `translateX(${distancia}%)`;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     actualizarCarrusel(); 
 });
+
+
+
+//PREGUNTAS FRECUENTES
+
+// let texto = document.getElementById('preguntas__frecuentes__texto');
+// texto.classList.add('preguntas__frecuentes__texto');
+// function visualizarRespuesta(button){
+    
+//     // texto.classList.toggle('preguntas__frecuentes__texto--open');
+//     texto.classList.add('preguntas__frecuentes__texto--open');
+
+//     if(texto.classList.contains('preguntas__frecuentes__texto--open')){
+//         button.classList.add('preguntas__frecuentes__boton--open');
+//     }else{
+//         button.classList.remove('preguntas__frecuentes__boton--open');
+//     }
+// }
+
+
+let texto = document.getElementById('preguntas__frecuentes__texto');
+texto.classList.remove('preguntas__frecuentes__texto--open');
+let boton = document.querySelector('.preguntas__frecuentes__boton');
+
+function visualizarRespuesta(button){
+    
+    texto.classList.toggle('preguntas__frecuentes__texto--open');
+
+    if(texto.classList.contains('preguntas__frecuentes__texto--open')){
+        button.classList.add('preguntas__frecuentes__boton--open');
+    }else{
+        button.classList.remove('preguntas__frecuentes__boton--open');
+    }
+}
+
+
+
+
+
+
+
+//BLOG
+const contenido = document.getElementById('blog-contenido');
+
+contenido.style.display = 'none';
+function verMas(){
+    if (contenido.style.display === 'none') {
+        contenido.style.display = 'flex';
+    } else {
+        contenido.style.display = 'none';
+    }
+
+}
+
+
 
 

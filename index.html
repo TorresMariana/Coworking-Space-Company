@@ -18,10 +18,10 @@
             <div class="menu__boton__hamburguesa__contenido"></div>
         </button>
         <nav class="header__menu">
-            <a class="header__menu__link" href="#">Home</a>
-            <a class="header__menu__link" href="#">About</a>
-            <a class="header__menu__link" href="#">Events</a>
-            <a class="header__menu__link" href="#">Blog</a>
+            <a class="header__menu__link" href="index.html">Home</a>
+            <a class="header__menu__link" href="#about">About</a>
+            <a class="header__menu__link" href="#eventos">Events</a>
+            <a class="header__menu__link" href="#blog">Blog</a>
         </nav>
     </header>
 
@@ -50,6 +50,7 @@
     </section>
 
     <!--Features-->
+    <a id="about"></a>
     <section class="container features">
         <div class="container__contenido__subtitulo">
             <h2 class="container__subtitulo">Why Choose</h2>
@@ -83,7 +84,7 @@
     </section>
 
     <!--Virtual tour-->
-    <a id="virtual-tour"></a>
+    <a id="eventos"></a>
     <section class="container virtual">
         <h4 class="companies__titulo">A virtual tour</h4>
         <div class="container__contenido__subtitulo">
@@ -190,9 +191,9 @@
             <div class="preguntas__frecuentes">
                 <div class="preguntas__frecuentes__contenido">
                     <h4 class="preguntas__frecuentes__titulo">How flexible are Cowork's membership plans?</h4>
-                    <p class="container__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
                 </div>
-                <button class="preguntas__frecuentes__boton">
+                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
                     <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
                 </button>
             </div>
@@ -256,7 +257,8 @@
     </section>
 
     <!--Blog-->
-    <section class="container blog">
+    <a id="blog"></a>
+    <section class="container blog" id="blog-contenedor">
         <h4 class="companies__titulo">Cowork Chronicles</h4>
         <div class="container__contenido__subtitulo">
             <h2 class="container__subtitulo">Insights, Innovation, and </h2>
@@ -345,12 +347,10 @@
                 </a>
             </div>
         </div>
-        <button class="container__contenido__link">View All</button>
+        <button class="container__contenido__link" onclick="verMas();">View All</button>
     </section>
 
     <footer class="container">
-        <!-- section.footer__contenedor>(div.footer__contenido>h2.footer__logo+p.container__texto+div.footer__suscribir>(input.footer__suscribir__input+button.footer__suscribir__boton)+p.container__texto)+(div>(h4.footer__titulo+ul.footer__lista>li.footer__lista__items))*3 -->
-
         <section class="footer__contenedor">
             <div class="footer__contenido">
                 <h2 class="footer__logo">Cowork</h2>
