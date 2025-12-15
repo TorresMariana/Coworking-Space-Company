@@ -4,409 +4,572 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cowork</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="assets/planet.png" type="icon">
+    <!--css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header__container">
-        <h1 class="header__logo">Cowork</h1>
 
-        <!--Menu hamburguesa-->
-        <input class="menu__hamburguesa" type="checkbox" id="menu-hamburguesa">
-        <button class="menu__hamburguesa__boton" aria-label="Menu de navegación" onclick="menuHamburguesa();">
-            <div class="menu__boton__hamburguesa__contenido"></div>
-            <div class="menu__boton__hamburguesa__contenido"></div>
-            <div class="menu__boton__hamburguesa__contenido"></div>
-        </button>
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html" onclick="cerrarmenuHamburguesa();">Home</a>
-            <a class="header__menu__link" href="#about" onclick="cerrarmenuHamburguesa();">About</a>
-            <a class="header__menu__link" href="#eventos" onclick="cerrarmenuHamburguesa();">Events</a>
-            <a class="header__menu__link" href="#blog" onclick="cerrarmenuHamburguesa();">Blog</a>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg" aria-label="Barra de navegación">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <h1 class="fs-2 fw-bold">Cowork</h1>
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Alternar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark w-100" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header">
+                        <h2 class="offcanvas-title fs-2 fw-bold" id="offcanvasNavbar2Label">Cowork</h2>
+                        <button type="button" class="btn-close btn-close-white me-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pricing">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#events">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#blog">Blog</a>
+                            </li>
+                        </ul>
+
+                        <div class="ms-auto d-flex flex-nowrap justify-content-end mt-5 mt-lg-0">
+                            <button type="button" class="btn btn-outline-dark me-2 text-nowrap logIn" id="logIn">Log In</button>
+                            <button type="button" class="btn btn-dark text-nowrap signUp" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <a id="hero"></a>
-    <main class="hero">
-        <section class="container__contenido">
-            <h2 class="container__contenido__titulo">Elevate Your Workspace with <span class="texto__resaltar">Cowork</span></h2>
-            <p class="container__texto">
-                Welcome to Cowork - where innovation meets collaboration in the heart  of productivity! Unleash 🚀 your potential in our thoughtfully designed coworking spaces, tailored to inspire creativity and foster connections.
-            </p>
-            <a class="container__contenido__link" href="#">Claim Your Spot</a>
+    <!--hero-->
+    <section class="container py-5">
+        <div class="row row-cols-1 row-cols-lg-2 ">
+            <div class="col d-flex flex-column gap-4 justify-content-center align-items-center align-items-lg-start px-4 py-5">
+                <h2 class="fs-1 fw-bold hero-titulo">Elevate Your Workspace with <span class="resaltar-texto">Cowork</span></h2>
+                <p>Welcome to Cowork – where innovation meets collaboration in the heart  of productivity! Unleash 🚀 your potential in our thoughtfully designed coworking spaces, tailored to inspire creativity and foster connections.</p>
+
+                <div>
+                  <button type="button" class="btn btn-dark">Claim Your Spot</button>  
+                </div>
+            </div>
+
+            <div class="col">
+                <img src="assets/hero-imagen.png" alt="personas trabajando con computadoras en una oficina">
+            </div>
+        </div>
+    </section>
+
+    <!--social proof-->
+    <section class="container py-5 text-center">
+        <h3 class="fs-6 fw-bold text-uppercase mb-3">Trusted by leading companies</h3>
+        <div class="carrusel py-4">
+            <div class="carrusel-item"><img src="assets/sponsor-1.png" alt=""></div>
+            <div class="carrusel-item"><img src="assets/sponsor-2.png" alt=""></div>
+            <div class="carrusel-item"><img src="assets/sponsor-3.png" alt=""></div>
+            <div class="carrusel-item"><img src="assets/sponsor-4.png" alt=""></div>
+            <div class="carrusel-item"><img src="assets/sponsor-5.png" alt=""></div>
+        </div>
+    </section>
+
+    <a id="pricing"></a>
+    <main class="container py-5">
+        <!--features-->
+        <section class="text-center py-5">
+            <div class=" d-flex justify-content-center align-items-center gap-3 flex-wrap mb-4">
+                <h4 class="fs-3 fw-bold titulo">Why Choose</h4>
+                <img class="titulo-img" src="assets/features-heading.png" alt="">
+                <h4 class="fs-3 fw-bold titulo">Cowork?</h4>
+            </div>
+
+            <div class="row align-items-stretch justify-content-lg-around justify-content-center w-100">
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center gap-4 p-5">
+                    <img src="assets/planet.png" alt="">
+                    <h5 class="fs-4">Flexible Spaces</h5>
+                    <p>
+                        Whether you're a solopreneur, startup, or an established enterprise, our flexible solutions cater to your evolving needs.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center gap-4 p-5">
+                    <img src="assets/creditCard.png" alt="">
+                    <h5 class="fs-4">Transparent Pricing</h5>
+                    <p>Choose a plan that suits your budget and business objectives, and experience the value of a premium coworking space without breaking the bank.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center gap-4 p-5">
+                    <img src="assets/userList.png" alt="">
+                    <h5 class="fs-4">Tailored Memberships</h5>
+                    <p>Whether you prefer the flexibility of a hot desk or the exclusivity of a private office, Cowork offers tailored solutions to suit every working style.</p>
+                </div>
+            </div>
         </section>
-        <img class="container__imagen" src="assets/hero-imagen.png" alt="imagen hero" >
+
+        <!--virtual tour-->
+        <a id="about"></a>
+        <section class="text-center py-5">
+            <div class="d-flex flex-column gap-4 justify-content-center align-items-center px-4 py-5">
+                <h3 class="fs-6 fw-bold text-uppercase mb-3">A virtual tour</h3>
+                <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mb-4">
+                    <h4 class="fs-3 fw-bold titulo">Explore Cowork through our</h4>
+                    <img class="titulo-img" src="assets/virtualTour-heading.png" alt="">
+                    <h4 class="fs-3 fw-bold titulo">Lens</h4>
+                </div>
+
+                <p class="w-75 mx-auto text-center">Experience the essence of Cowork before setting foot in our dynamic spaces. Our immersive video tour gives you a sneak peek into the vibrant atmosphere, cutting-edge facilities, and collaborative energy that define the Cowork experience.</p>
+
+                <div>
+                  <button type="button" class="btn btn-outline-dark">Explore Spaces</button>  
+                </div>
+            </div>
+
+            <iframe src="https://www.youtube.com/embed/495IvCrJG9w" title="Video de oficina" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </section>
+
+        <!--statistics-->
+        <section class="row row-cols-1 row-cols-lg-2 ">
+            <div class="col d-flex flex-column gap-4 justify-content-center align-items-center align-items-lg-start px-4 py-5">
+                <h3 class="fs-6 fw-bold text-uppercase mb-3">Cowork in numbers</h3>
+                <h4 class="fs-3 fw-bold titulo">Transformative statistics that speak volumes</h4>
+                
+                <div class="row row-cols-2">
+                    <div class="col estadisticas-contenido">
+                        <h2 class="estadisticas-datos  fw-bold">240%</h2>
+                        <p>Community Growth</p>
+                    </div>
+                    <div class="col estadisticas-contenido">
+                        <h2 class="estadisticas-datos  fw-bold">99%</h2>
+                        <p>Technology Uptime</p>
+                    </div>
+                    <div class="col estadisticas-contenido">
+                        <h2 class="estadisticas-datos  fw-bold">50+</h2>
+                        <p>Happy Members</p>
+                    </div>
+                    <div class="col estadisticas-contenido">
+                        <h2 class="estadisticas-datos  fw-bold">100%</h2>
+                        <p>Renewable Energy Sources</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <img src="assets/statistics-image.png" alt="fotograia de una oficina vacia">
+            </div>
+        </section>
     </main>
-
-    <!--Companias-->
-    <section class="container companies">
-        <h3 class="companies__titulo">Trusted by Leading Companies</h3>
-        <div class="companies__contenido">
-            <img class="companies__contenido__imagen" src="assets/sponsor-1.png" alt="imagen companies">
-            <img class="companies__contenido__imagen" src="assets/sponsor-2.png" alt="imagen companies">
-            <img class="companies__contenido__imagen" src="assets/sponsor-3.png" alt="imagen companies">
-            <img class="companies__contenido__imagen" src="assets/sponsor-4.png" alt="imagen companies">
-            <img class="companies__contenido__imagen" src="assets/sponsor-5.png" alt="imagen companies">
+    
+    <!--testimonial-->
+    <section class="container py-5">
+        <div class=" text-center mb-5">
+            <h3 class="fs-6 fw-bold text-uppercase mb-3">Cowork in words</h3>
+            <h4 class="fs-3 fw-bold titulo">Hear it from our clients</h4>
         </div>
-    </section>
 
-    <!--Features-->
-    <a id="about"></a>
-    <section class="container features">
-        <div class="container__contenido__subtitulo">
-            <h2 class="container__subtitulo">Why Choose</h2>
-            <img class="subtitulo__imagen" src="assets/features-heading.png" alt="imagen titulo">
-            <h2 class="container__subtitulo">Cowork?</h2>
-        </div>
-        <div class="features__contenedor">
-            <div class="features__contenido">
-                <img class="features__contenido__imagen" src="assets/planet.png" alt="imagen caracteristicas">
-                <h3 class="features__contenido__titulo">Flexible Spaces</h3>
-                <p class="feactures__contenido__texto">
-                    Whether you're a solopreneur, startup, or an established enterprise, our flexible office solutions cater to your evolving needs.
-                </p>
+        <div>
+            <div class="text-end">
+                <button type="button" class="btn" id="buttonPrev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
+                </button>
+                <button type="button" class="btn" id="buttonNext">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </button>
+
             </div>
-            <div class="features__contenido">
-                <img class="features__contenido__imagen" src="assets/creditCard.png" alt="imagen caracteristicas">
-                <h3 class="features__contenido__titulo">Transparent Pricing</h3>
-                <p class="feactures__contenido__texto">
-                    Choose a plan that suits your budget and business objectives, and experience the value of a premium coworking space without breaking the bank.
-                </p>
-            </div>
-            <div class="features__contenido">
-                <img class="features__contenido__imagen" src="assets/userList.png" alt="imagen caracteristicas">
-                <h3 class="features__contenido__titulo">Tailored Memberships</h3>
-                <p class="feactures__contenido__texto">
-                    Whether you prefer the flexibility of a hot desk or the exclusivity of a private office, Cowork offers tailored solutions to suit every working style.
-                </p>
-            </div>
-        </div>
-        
-    </section>
 
-    <!--Virtual tour-->
-    <a id="eventos"></a>
-    <section class="container virtual">
-        <h4 class="companies__titulo">A virtual tour</h4>
-        <div class="container__contenido__subtitulo">
-            <h2 class="container__subtitulo">Explore Cowork Through Our </h2>
-            <img class="subtitulo__imagen" src="assets/virtualTour-heading.png" alt="imagen titulo">
-            <h2 class="container__subtitulo">Lens</h2>
-        </div>
-        <!-- <div class="container__contenido"> -->
-            <p class="container__texto">
-                Experience the essence of Cowork before setting foot in our dynamic spaces. Our immersive video tour gives you a sneak peek into the vibrant atmosphere, cutting-edge facilities, and collaborative energy that define the Cowork experience.
-            </p>
-            <a class="container__contenido__link" href="#">Explore Spaces</a>
-        <!-- </div> -->
-        
-        <img class="virtual__imagen" src="assets/virtualTour-imagen.png" alt="imagen de muebles">
-    </section>
+            <div class="overflow-hidden slider-wrapper">
+                <div class="d-flex align-items-stretch justify-content-start w-100 gap-4 slider">
+                    <div class="col col-12 col-md-6 col-lg-5 d-flex flex-column align-items-center text-center gap-4 p-4 rounded-4 testimonial">
+                        <img src="assets/Avatar Image 1.png" alt="">
+                        <p>"The 24/7 access and secure facilities have been incredibly convenient for my team's flexible schedules. We love the coworking space!"</p>
+                        <h5 class="fs-6 fw-bold text-uppercase">Liam Brown</h5>
+                        <p>Software Engineer, TechStartup Innovations</p>
+                    </div>
+                    
+                    <div class="col col-12 col-md-6 col-lg-5 d-flex flex-column align-items-center text-center gap-4 p-4 rounded-4 testimonial">
+                        <img src="assets/Avatar Image 2.png" alt="">
+                        <p>“The aesthetics of Cowork are inspiring. The attention to detail in the design creates an atmosphere that sparks creativity. It's a place where ideas flow effortlessly, and collaboration happens organically.”</p>
+                        <h5 class="fs-6 fw-bold text-uppercase">Michael Rodriguez</h5>
+                        <p>Creative Director, DesignCraft Studio</p>
+                    </div>
 
-    <!--Estadisticas-->
-    <a id="estadisticas"></a>
-    <section class="hero estadisticas">
-        <div class="container__contenido">
-            <h4 class="companies__titulo">Cowork in Numbers</h4>
-            <h2 class="container__subtitulo">Transformative Statistics That Speak Volumes</h2>
+                    <div class="col col-12 col-md-6 col-lg-5 d-flex flex-column align-items-center text-center gap-4 p-4 rounded-4 testimonial">
+                        <img src="assets/Avatar Image 3.png" alt="">
+                        <p>"As a freelance designer, I was getting tired of working from home or coffee shops. The coworking space has provided me with a productive and professional environment to focus on my work."</p>
+                        <h5 class="fs-6 fw-bold text-uppercase">Michael Thompson</h5>
+                        <p>Graphic Designer, DesignCo</p>
+                    </div>
 
-            <div class="estadistica__contenedor">
-                <div class="estadistica__contenido">
-                    <h2 class="estadistica__contenido__porcentaje">240%</h2>
-                    <p class="container__texto">Community Growth</p>
-                </div>
-                <div class="estadistica__contenido">
-                    <h2 class="estadistica__contenido__porcentaje">99%</h2>
-                    <p class="container__texto">Technology Uptime</p>
-                </div>
-                <div class="estadistica__contenido">
-                    <h2 class="estadistica__contenido__porcentaje">50%</h2>
-                    <p class="container__texto">Happy Members</p>
-                </div>
-                <div class="estadistica__contenido">
-                    <h2 class="estadistica__contenido__porcentaje">100%</h2>
-                    <p class="container__texto">Renewable Energy Sources</p>
+                    <div class="col col-12 col-md-6 col-lg-5 d-flex flex-column align-items-center text-center gap-4 p-4 rounded-4 testimonial">
+                        <img src="assets/Avatar Image 4.png" alt="">
+                        <p>"The coworking space has been a wonderful resource for my team. The open floor plan and dedicated private offices allow us to collaborate and concentrate as needed."</p>
+                        <h5 class="fs-6 fw-bold text-uppercase">David Wilson</h5>
+                        <p>Project Manager, SoftwareSolutions LLC</p>
+                    </div>
+
+                    <div class="col col-12 col-md-6 col-lg-5 d-flex flex-column align-items-center text-center gap-4 p-4 rounded-4 testimonial">
+                        <img src="assets/Avatar Image 5.png" alt="">
+                        <p>"The flexible membership options and amenities like high-speed internet, printers, and meeting rooms have made this coworking space a perfect fit for my small business."</p>
+                        <h5 class="fs-6 fw-bold text-uppercase">Alex Nguyen</h5>
+                        <p>Marketing Consultant, Maverick Marketing</p>
+                    </div>
+
                 </div>
             </div>
-        </div>
-        <img class="container__imagen" src="assets/statistics-image.png" alt="imagen estadisticas">
-    </section>
-
-    <!--testimonios-->
-    <section class="container testimonios">
-        <h4 class="companies__titulo">Cowork in Words</h4>
-        <h2 class="container__subtitulo">Hear It from Our Clients</h2>
-        <div class="testimonios__carrusel">
-            <div class="testimonios__contenedor" id="carrusel">
-                <div class="testimonio__contenido">
-                    <img class="testimonio__imagen" src="assets/Avatar Image 1.png" alt="imagen testimonio">
-                    <p class="container__texto">"The 24/7 access and secure facilities have been incredibly convenient for my team's flexible schedules. We love the coworking space!"</p>
-                    <h4 class="testimonio__titulo">Liam Brown</h4>
-                    <p class="container__texto">Software Engineer, TechStartup Innovations</p>
-                </div>
-                <div class="testimonio__contenido">
-                    <img class="testimonio__imagen" src="assets/Avatar Image 2.png" alt="imagen testimonio">
-                    <p class="container__texto">“The aesthetics of Cowork are inspiring. The attention to detail in the design creates an atmosphere that sparks creativity. It's a place where ideas flow effortlessly, and collaboration happens organically.”</p>
-                    <h4 class="testimonio__titulo">Michael Rodriguez</h4>
-                    <p class="container__texto">Creative Director, DesignCraft Studio</p>
-                </div>
-                <div class="testimonio__contenido">
-                    <img class="testimonio__imagen" src="assets/Avatar Image 3.png" alt="imagen testimonio">
-                    <p class="container__texto">"As a freelance designer, I was getting tired of working from home or coffee shops. The coworking space has provided me with a productive and professional environment to focus on my work."</p>
-                    <h4 class="testimonio__titulo">Michael Thompson</h4>
-                    <p class="container__texto">Graphic Designer, DesignCo</p>
-                </div>
-                <div class="testimonio__contenido">
-                    <img class="testimonio__imagen" src="assets/Avatar Image 4.png" alt="imagen testimonio">
-                    <p class="container__texto">"The coworking space has been a wonderful resource for my team. The open floor plan and dedicated private offices allow us to collaborate and concentrate as needed."</p>
-                    <h4 class="testimonio__titulo">David Wilson</h4>
-                    <p class="container__texto">Project Manager, SoftwareSolutions LLC</p>
-                </div>
-                <div class="testimonio__contenido">
-                    <img class="testimonio__imagen" src="assets/Avatar Image 5.png" alt="imagen testimonio">
-                    <p class="container__texto">"The flexible membership options and amenities like high-speed internet, printers, and meeting rooms have made this coworking space a perfect fit for my small business."</p>
-                    <h4 class="testimonio__titulo">Alex Nguyen</h4>
-                    <p class="container__texto">Marketing Consultant, Maverick Marketing</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonios__botones__contenedor">
-            <button class="testimonios__boton" id="botonAnterior" onclick="botonAnterior();">
-                <img class="testimonios__boton__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-            </button>
-            <button class="testimonios__boton" onclick="botonSiguiente();">
-                <img class="testimonios__boton__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-            </button>
         </div>
     </section>
 
     <!--FAQ-->
-    <section class="hero faq">
-        <div class="container__contenido">
-            <h4 class="companies__titulo">Frequently Asked Questions</h4>
-            <h2 class="container__subtitulo">Your Roadmap to Coworking Clarity</h2>
-            <p class="container__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
-        </div>
-        <div class="preguntas__frecuentes__contenedor">
-            <div class="preguntas__frecuentes">
-                <div class="preguntas__frecuentes__contenido">
-                    <h4 class="preguntas__frecuentes__titulo">How flexible are Cowork's membership plans?</h4>
-                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
-                </div>
-                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
-                    <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-                </button>
+    <section class="container py-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col d-flex flex-column gap-4 justify-content-center align-items-center align-items-lg-start py-5">
+                <h3 class="fs-6 fw-bold text-uppercase mb-3">Cowork in numbers</h3>
+                <h4 class="fs-3 fw-bold titulo">Transformative statistics that speak volumes</h4>
+                
+                <p>Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+
             </div>
-            <div class="preguntas__frecuentes">
-                <div class="preguntas__frecuentes__contenido">
-                    <h4 class="preguntas__frecuentes__titulo">What kind of events and networking opportunities does Cowork provide?</h4>
-                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+
+            <div class="col">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <span class="fs-6 fw-bold">How flexible are Cowork's membership plans?</span>
+                            </button>
+                        </div>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span class="fs-6 fw-bold">What kind of events and networking opportunities does Cowork provide?</span>
+                            </button>
+                        </div>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span class="fs-6 fw-bold">Can I tour the Cowork space before committing to a membership?</span>
+                        </button>
+                    </div>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <span class="fs-6 fw-bold">Is Cowork suitable for remote teams and distributed workforces?</span>
+                            </button>
+                        </div>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <span class="fs-6 fw-bold">What measures does Cowork take for environmental sustainability?</span>
+                            </button>
+                        </div>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <span class="fs-6 fw-bold">Still has questions?</span>
+                            </button>
+                        </div>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
+                        </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
-                    <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-                </button>
-            </div>
-            <div class="preguntas__frecuentes">
-                <div class="preguntas__frecuentes__contenido">
-                    <h4 class="preguntas__frecuentes__titulo">Can I tour the Cowork space before committing to a membership?</h4>
-                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
-                </div>
-                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
-                    <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-                </button>
-            </div>
-            <div class="preguntas__frecuentes">
-                <div class="preguntas__frecuentes__contenido">
-                    <h4 class="preguntas__frecuentes__titulo">Is Cowork suitable for remote teams and distributed workforces?</h4>
-                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
-                </div>
-                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
-                    <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-                </button>
-            </div>
-            <div class="preguntas__frecuentes">
-                <div class="preguntas__frecuentes__contenido">
-                    <h4 class="preguntas__frecuentes__titulo">What measures does Cowork take for environmental sustainability?</h4>
-                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
-                </div>
-                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
-                    <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-                </button>
-            </div>
-            <div class="preguntas__frecuentes">
-                <div class="preguntas__frecuentes__contenido">
-                    <h4 class="preguntas__frecuentes__titulo">Still has questions?</h4>
-                    <p class="container__texto preguntas__frecuentes__texto" id="preguntas__frecuentes__texto">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
-                </div>
-                <button class="preguntas__frecuentes__boton" onclick="visualizarRespuesta(this);">
-                    <img class="preguntas__frecuentes__imagen" src="assets/CaretCircle.png" alt="imagen flecha">
-                </button>
             </div>
         </div>
     </section>
 
-    <!--Suscripción-->
-    <section class="container suscripcion">
-        <div class="container__contenido__subtitulo">
-            <h2 class="container__subtitulo">Seize </h2>
-            <img class="subtitulo__imagen" src="assets/cta-heading.png" alt="imagen titulo">
-            <h2 class="container__subtitulo"> The Moment - Join Cowork Today!</h2>
+    <!--CTA-->
+    <a id="events"></a>
+    <section class="container py-5">
+        <div class="d-flex flex-column gap-4 justify-content-center align-items-center px-4 py-5 w-75 mx-auto text-center">
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mb-4">
+                <h4 class="fs-3 fw-bold titulo">Seize</h4>
+                <img class="titulo-img" src="assets/cta-heading.png" alt="">
+                <h4 class="fs-3 fw-bold titulo">The moment - join Cowork today!</h4>
+            </div>
+
+            <p>Uncover the transformative power of Cowork as echoed by those who've made it their professional haven. This is more than finding a desk; it's discovering a community that fuels your journey to success.</p>
+
+            <div>
+                <button type="button" class="btn btn-outline-dark">Claim Your Spot</button>  
+            </div>
         </div>
-        <p class="container__texto">Uncover the transformative power of Cowork as echoed by those who've made it their professional haven. This is more than finding a desk; it's discovering a community that fuels your journey to success.</p>
-        <a class="container__contenido__link" href="#">Claim Your Spot</a>
+
     </section>
 
-    <!--Blog-->
+    <!--blog-->
     <a id="blog"></a>
-    <section class="container blog" id="blog-contenedor">
-        <h4 class="companies__titulo">Cowork Chronicles</h4>
-        <div class="container__contenido__subtitulo">
-            <h2 class="container__subtitulo">Insights, Innovation, and </h2>
-            <img class="subtitulo__imagen" src="assets/blog-heading.png" alt="imagen titulo">
-            <h2 class="container__subtitulo"> Inspiration</h2>
+    <section class="container py-5 text-center">
+        <div class="d-flex flex-column gap-4 justify-content-center align-items-center px-4 py-5 text-center">
+            <h3 class="fs-6 fw-bold text-uppercase mb-3">Cowork chronicles</h3>
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mb-4">
+                <h4 class="fs-3 fw-bold titulo">Insights, Innovation, and </h4>
+                <img class="titulo-img" src="assets/blog-heading.png" alt="">
+                <h4 class="fs-3 fw-bold titulo">Inspiration</h4>
+            </div>
+
+            <p class="w-75 mx-auto text-center">Stay updated on the latest trends in coworking, productivity tips, and success stories that define the Cowork experience.</p>
         </div>
-        <p class="container__texto">Stay updated on the latest trends in coworking, productivity tips, and success stories that define the Cowork experience.</p>
 
-        <div class="blog__contenedor">
-            <div class="blog__contenido">
-                <img class="blog__contenido__imagen" src="assets/card-imagen-1.png" alt="imagen blog">
-                <div class="blog__contenido__info">
-                    <p class="blog__contenido__info__etiqueta etiqueta-1">Trending</p>
-                    <p class="blog__contenido__info__tiempo">7 min read</p>
+
+        <div class="row align-items-stretch justify-content-center w-100 py-5 mx-auto">
+
+            <div class="col-12 col-md-4">
+                <div class="card border-0 mb-5">
+                    <img src="assets/card-imagen-1.png" class="card-img-top rounded-3" alt="">
+                    <div class="d-flex gap-3 pt-4 align-items-center">
+                        <p class="etiqueta etiqueta-1 fw-bold">Trending</p>
+                        <p>7 min read</p>
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title titulo fs-6 mb-4">Navigating the Future: Trends in Modern Coworking Spaces</h5>
+                        
+                        <a href="#" class="card-link">Read more <i class="bi bi-chevron-right"></i></a>
+                    </div>
                 </div>
-                <h2 class="blog__contenido__titulo">Navigating the Future: Trends in Modern Coworking Spaces</h2>
-                <a class="blog__contenido__link" href="#">
-                    Read more 
-                    <img class="blog__link__imagen" src="assets/Chevron Right.png" alt="">
-                </a>
             </div>
 
-            <div class="blog__contenido">
-                <img class="blog__contenido__imagen" src="assets/card-iamgen-2.png" alt="imagen blog">
-                <div class="blog__contenido__info">
-                    <p class="blog__contenido__info__etiqueta etiqueta-2">Productivity</p>
-                    <p class="blog__contenido__info__tiempo">5 min read</p>
+            <div class="col-12 col-md-4">
+                <div class="card border-0  mb-5">
+                    <img src="assets/card-iamgen-2.png" class="card-img-top rounded-3" alt="">
+                    <div class="d-flex gap-3 pt-4 align-items-center">
+                        <p class="etiqueta etiqueta-2 fw-bold">Productivity</p>
+                        <p>5 min read</p>
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title titulo fs-6 mb-4">Mastering Productivity: Tips from Cowork's High Achievers</h5>
+                        
+                        <a href="#" class="card-link">Read more <i class="bi bi-chevron-right"></i></a>
+                    </div>
                 </div>
-                <h2 class="blog__contenido__titulo">Mastering Productivity: Tips from Cowork's High Achievers</h2>
-                <a class="blog__contenido__link" href="#">
-                    Read more 
-                    <img class="blog__link__imagen" src="assets/Chevron Right.png" alt="">
-                </a>
             </div>
 
-            <div class="blog__contenido">
-                <img class="blog__contenido__imagen" src="assets/card-imagen-3.png" alt="imagen blog">
-                <div class="blog__contenido__info">
-                    <p class="blog__contenido__info__etiqueta etiqueta-3">Talk</p>
-                    <p class="blog__contenido__info__tiempo">10 min read</p>
+            <div class="col-12 col-md-4">
+                <div class="card border-0 mb-5">
+                    <img src="assets/card-imagen-3.png" class="card-img-top rounded-3" alt="">
+                    <div class="d-flex gap-3 pt-4 align-items-center">
+                        <p class="etiqueta etiqueta-3 fw-bold">Talk</p>
+                        <p>10 min read</p>
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title titulo fs-6 mb-4">Tech Talk: The Backbone of Cowork's Seamless Experience</h5>
+                        
+                        <a href="#" class="card-link">Read more <i class="bi bi-chevron-right"></i></a>
+                    </div>
                 </div>
-                <h2 class="blog__contenido__titulo">Tech Talk: The Backbone of Cowork's Seamless Experience</h2>
-                <a class="blog__contenido__link" href="#">
-                    Read more 
-                    <img class="blog__link__imagen" src="assets/Chevron Right.png" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="blog__contenedor ocultar"  id="blog-contenido">
-            <div class="blog__contenido">
-                <img class="blog__contenido__imagen" src="assets/card-imagen-4.jpg" alt="imagen blog">
-                <div class="blog__contenido__info">
-                    <p class="blog__contenido__info__etiqueta etiqueta-1">Trending</p>
-                    <p class="blog__contenido__info__tiempo">7 min read</p>
-                </div>
-                <h2 class="blog__contenido__titulo">Shaping Tomorrow's Workspaces: Innovations in Remote Collaboration</h2>
-                <a class="blog__contenido__link" href="#">
-                    Read more 
-                    <img class="blog__link__imagen" src="assets/Chevron Right.png" alt="">
-                </a>
-            </div>
-
-            <div class="blog__contenido">
-                <img class="blog__contenido__imagen" src="assets/card-imagen-5.jpg" alt="imagen blog">
-                <div class="blog__contenido__info">
-                    <p class="blog__contenido__info__etiqueta etiqueta-4">Innovation</p>
-                    <p class="blog__contenido__info__tiempo">12 min read</p>
-                </div>
-                <h2 class="blog__contenido__titulo">Boosting Efficiency: Insights from Industry Leaders at Cowork</h2>
-                <a class="blog__contenido__link" href="#">
-                    Read more 
-                    <img class="blog__link__imagen" src="assets/Chevron Right.png" alt="">
-                </a>
-            </div>
-
-            <div class="blog__contenido">
-                <img class="blog__contenido__imagen" src="assets/card-imagen-6.jpg" alt="imagen blog">
-                <div class="blog__contenido__info">
-                    <p class="blog__contenido__info__etiqueta etiqueta-2">Productivity</p>
-                    <p class="blog__contenido__info__tiempo">5 min read</p>
-                </div>
-                <h2 class="blog__contenido__titulo">Innovation Hub: The Tools Powering Cowork's Collaborative Environment</h2>
-                <a class="blog__contenido__link" href="#">
-                    Read more 
-                    <img class="blog__link__imagen" src="assets/Chevron Right.png" alt="">
-                </a>
             </div>
         </div>
-        <button class="container__contenido__link" onclick="verMas(this);">View All</button>
+
+        <div class="row align-items-stretch justify-content-center w-100 py-5 mx-auto d-none" id="blogCards">
+
+            <div class="col-12 col-md-4">
+                <div class="card border-0 mb-5">
+                    <img src="assets/card-imagen-4.jpg" class="card-img-top rounded-3" alt="">
+                    <div class="d-flex gap-3 pt-4 align-items-center">
+                        <p class="etiqueta etiqueta-1 fw-bold">Trending</p>
+                        <p>7 min read</p>
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title titulo fs-6 mb-4">Shaping Tomorrow's Workspaces: Innovations in Remote Collaboration</h5>
+                        
+                        <a href="#" class="card-link">Read more <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card border-0 mb-5">
+                    <img src="assets/card-imagen-5.jpg" class="card-img-top rounded-3" alt="">
+                    <div class="d-flex gap-3 pt-4 align-items-center">
+                        <p class="etiqueta etiqueta-4 fw-bold">Innovation</p>
+                        <p>12 min read</p>
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title titulo fs-6 mb-4">Boosting Efficiency: Insights from Industry Leaders at Cowork</h5>
+                        
+                        <a href="#" class="card-link">Read more <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card border-0 mb-5">
+                    <img src="assets/card-imagen-6.jpg" class="card-img-top rounded-3" alt="">
+                    <div class="d-flex gap-3 pt-4 align-items-center">
+                        <p class="etiqueta etiqueta-2 fw-bold">Productivity</p>
+                        <p>5 min read</p>
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title titulo fs-6 mb-4">Innovation Hub: The Tools Powering Cowork's Collaborative Environment</h5>
+                        
+                        <a href="#" class="card-link">Read more <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-outline-dark" id="buttonToggle">View More</button>
+
     </section>
 
-    <footer class="container">
-        <section class="footer__contenedor">
-            <div class="footer__contenido">
-                <h2 class="footer__logo">Cowork</h2>
-                <p class="footer__texto">Join our newsletter to stay up to date on features and releases.</p>
-                <div class="footer__suscribir">
-                    <input class="footer__suscribir__input" type="text" placeholder="Enter your email">
-                    <button class="footer__suscribir__boton">Subscribe</button>
-                </div>
-                <p class="footer__texto">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+    <!--footer-->
+    <footer class="container py-5 px-4">
+        <section class="footer-container row py-5 my-5">
+            <div class="col col-12 col-md-6 p-5">
+                <h2 class="fs-2 fw-bold mb-5">Cowork</h2>
+                <p>Join our newsletter to stay up to date on features and releases.</p>
+
+                <form class="d-flex my-4 mt-lg-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Enter your email" aria-label="Search">
+                    <button class="btn btn-light" type="submit">Subscribe</button>
+                </form>
+
+                <p>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
             </div>
-            <div class="footer__contenido">
-                <h4 class="footer__titulo">Explore More</h4>
-                <ul class="footer__lista">
-                    <li class="footer__lista__items">Home</li>
-                    <li class="footer__lista__items">About</li>
-                    <li class="footer__lista__items">Events</li>
-                    <li class="footer__lista__items">Blog</li>
+
+            <div class="col col-12 col-md-2 p-5">
+                <h3 class="fs-6 fw-bold text-uppercase text-center text-lg-start mb-3">Explore more</h3>
+
+                <ul class="d-flex flex-column justify-content-center align-items-center align-items-lg-start flex-grow-1 px-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
                 </ul>
             </div>
-            <div class="footer__contenido">
-                <h4 class="footer__titulo">Stay Connected</h4>
-                <ul class="footer__lista">
-                    <li class="footer__lista__items">Subscribe</li>
-                    <li class="footer__lista__items">Member Stories</li>
-                    <li class="footer__lista__items">Locations</li>
-                    <li class="footer__lista__items">Write for Us</li>
+
+            <div class="col col-12 col-md-2 p-5">
+                <h3 class="fs-6 fw-bold text-uppercase text-center text-lg-start mb-3">Stay connected</h3>
+
+                <ul class="d-flex flex-column justify-content-center align-items-center align-items-lg-start flex-grow-1 px-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Subscribe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Member Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Write for Us</a>
+                    </li>
                 </ul>
             </div>
-            <div class="footer__contenido">
-                <h4 class="footer__titulo">Follow Us</h4>
-                <ul class="footer__lista">
-                    <li><a class="footer__lista__items" href="https://www.facebook.com/">Facebook</a></li>
-                    <li><a class="footer__lista__items" href="https://www.instagram.com/">Instagram</a></li>
-                    <li><a class="footer__lista__items" href="https://twitter.com/">X</a></li>
-                    <li><a class="footer__lista__items" href="https://www.linkedin.com/">Linkedin</a></li>
-                    <li><a class="footer__lista__items" href="https://www.youtube.com/">Youtube</a></li>
+
+            <div class="col col-12 col-md-2 p-5">
+                <h3 class="fs-6 fw-bold text-uppercase text-center text-lg-start mb-3">Follow us</h3>
+
+                <ul class="d-flex flex-column justify-content-center align-items-center align-items-lg-start flex-grow-1 px-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Facebook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Instagram</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">X</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Linkedln</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Youtube</a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <section class="row row-cols-1 row-cols-lg-2">
+            <div class="col text-center text-lg-start">
+               <small class="text-body-secondary fs-6">&copy; 2024 Cowork. All rights reserved.</small> 
+            </div>
+            
+            <div class="col mt-4 mt-md-0">
+                <ul class="d-flex justify-content-center justify-content-lg-end align-items-center flex-grow-1 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cookies Settings</a>
+                    </li>
                 </ul>
             </div>
         </section>
-        <div class="creditos">
-            <p class="container__texto">© 2024 Cowork. All rights reserved.</p>
-            <ul class="footer__legal">
-                <li>
-                    <a class="footer__legal__Link" href="#">Privacy Policy</a>
-                </li>
-                <li>
-                    <a class="footer__legal__Link" href="">Terms of Service</a>
-                </li>
-                <li>
-                    <a class="footer__legal__Link" href="">Cookies Settings</a>
-                </li>
-            </ul>
-        </div>
+
     </footer>
 
-    <!--javascript-->
-    <script src="js/app.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/utils.js"></script>
 </body>
 </html>
