@@ -9,6 +9,13 @@
 
 
 
+
+## Prototipo en Figma:
+
+* [Figma](https://www.figma.com/community/file/1354651678737219705/cowork-coworking-space-company)
+
+
+
 ## Herramientas utilizadas:
 
 * HTML
@@ -18,7 +25,6 @@
 * JavaScript
 
 
+## Framework:
 
-## Prototipo en Figma:
-
-* [Figma](https://www.figma.com/community/file/1354651678737219705/cowork-coworking-space-company)
+* Bootstrap
